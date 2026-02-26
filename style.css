@@ -26,7 +26,6 @@ body {}
 }
 
 
-
 #pokemonlist li {
     background: white;
     border-radius: 12px;
@@ -64,5 +63,55 @@ h1 {
     object-fit: contain;
 }
 
+button a{
+    color: #8a6e13;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
 
-/* Detail page */
+
+/* Page Detail */
+
+#pokemonImg {
+  width: 320px;
+  max-width: 90%;
+  display: block;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+#pokemonImg:hover {
+  transform: scale(1.05);
+}
+
+        .fire {
+        background: linear-gradient(135deg, #ff9a8b, #ff6a00);
+        }
+
+        .water {
+        background: linear-gradient(135deg, #74ebd5, #0099ff);
+        }
+
+        .grass {
+        background: linear-gradient(135deg, #a8ff78, #38d39f);
+        }
+
+        .electric {
+        background: linear-gradient(135deg, #fff200, #f7971e);
+        }
+
+        .normal {
+        background: linear-gradient(135deg, #e0eafc, #cfdef3);
+        }
+        .bug {
+        background: linear-gradient(135deg, #dce35b, #45b649);
+        }
+        
+
+
+
