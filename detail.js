@@ -18,5 +18,3 @@ if (!name) {
       nameEl.textContent = "fejl ved indlæsning af pokemon";
     });
 }
-
-

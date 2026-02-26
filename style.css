@@ -8,6 +8,24 @@
 body {}
 
 
+main article.red {
+    background-color: red;
+}
+
+main {
+    margin-inline: auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+article img {
+    width: 100%;
+    height:auto;
+    display: block;
+}
+
 #pokemonlist {
     list-style: none;
     padding: 0;
