@@ -22,11 +22,19 @@ main {
 
 article img {
     width: 100%;
-    height:auto;
+    height: auto;
     display: block;
 }
 
-#pokemonlist {
+h1 {
+    font-size: 54px;
+    text-align: center;
+    margin: 40px 0;
+    color: #8a6e13;
+}
+
+
+/* #pokemonlist {
     list-style: none;
     padding: 0;
     display: grid;
@@ -89,7 +97,7 @@ button a{
 }
 
 
-/* Page Detail */
+Page Detail
 
 #pokemonImg {
   width: 320px;
@@ -128,8 +136,4 @@ button a{
         }
         .bug {
         background: linear-gradient(135deg, #dce35b, #45b649);
-        }
-        
-
-
-
+        } */
