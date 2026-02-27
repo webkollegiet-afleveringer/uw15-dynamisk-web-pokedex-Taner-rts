@@ -14,7 +14,7 @@ main article.red {
 
 main {
     margin-inline: auto;
-    max-width: 800px;
+    max-width: 900px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
