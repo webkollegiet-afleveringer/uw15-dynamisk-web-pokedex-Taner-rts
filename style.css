@@ -5,7 +5,9 @@
     margin: 0;
 }
 
-body {}
+body {
+    width: 100%;
+}
 
 
 main article.red {
