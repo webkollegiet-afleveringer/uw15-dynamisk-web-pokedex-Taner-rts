@@ -1,0 +1,128 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  /* max-width: 375px; */
+  /* margin: 0 auto; */
+  background-color: #DC0A2D;
+}
+
+main article.red {
+  background-color: #DC0A2D;
+}
+
+main {
+  padding: 2%;
+}
+
+.pokemon-inner-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.pokemon {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.445);
+}
+
+.pokemon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+}
+
+
+/* Link fylder hele kortet */
+.pokemon a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background: linear-gradient(white 55%, rgb(184, 183, 183)) 45%;
+}
+
+.pokemon-number {
+  width: 100%;
+  font-size: 12px;
+  color: #8a8a8a;
+  text-align: right;
+}
+
+.pokemon figcaption span {
+  order: 3;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.pokemon img {
+  order: 2;
+  width: 80px;
+  height: 80px;
+  margin-top: 6px;
+}
+
+
+h1 {
+
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+
+}
+
+.search {
+  width: 330px;
+  height: 30px;
+  border: none;
+  border-radius: 999px;
+  padding: 0 18px;
+  font-size: 14px;
+  margin-left: 10px;
+
+}
+
+.tekst-billed {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 10px;
+  padding: 2%;
+  margin-top: 20px;
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: left;
+
+
+}
+
+#search {
+  color: black;
+  position: absolute;
+  margin-left: 10px;
+  padding-top: 10px;
+  width: 300px;
+
+
+}
+
+#sort-button {
+  display: flex;
+  margin-left: 300px;
+}
+
+/* Mobil: 2 kolonner på små skærme */
+@media (max-width: 360px) {
+  .pokemon-inner-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
