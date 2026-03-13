@@ -1,80 +1,103 @@
-let currentOffset = 0;
-let limit = 20;
-const artworkUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
+// let currentOffset = 0;
+// let limit = 20;
+// const artworkUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
 
 
-function fetchPokemon(offset) {
-    fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
+// function fetchPokemon(offset) {
+//     fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
 
-        .then(response => response.json())
-        .then(data => {
+//         .then(response => response.json())
+//         .then(data => {
 
-            displayPokemon(data);
-        })
-}
+//             displayPokemon(data);
+//         })
+// }
 
-const mainDom = document.querySelector("main");
-function displayPokemon(data) {
-    const results = data.results
-    const pokemonsString = results.map((result) => {
-        const { name, url } = result
-        const id = getIdFromPokemon(url)
+// const mainDom = document.querySelector("main");
 
-        return /* html */`
-        <article>
-        <a href="detail.html?id=${id}">
+// function displayPokemon(data) {
+//     const results = data.results
+//     const pokemonsString = results.map((result) => {
+//         const { name, url } = result
+//         const id = getIdFromPokemon(url)
+
+//         return /* html */`
+//         <article>
+//         <a href="detail.html?id=${id}">
         
-        <p>##${id}</p>
+//         <p>##00${id}</p>
         
         
         
-        <img src="${artworkUrl}${id}.png" alt="${name}">
-        <h2>${name}</h2>
+//         <img src="${artworkUrl}${id}.png" alt="${name}">
+//         <h2>${name}</h2>
         
-        </a>
-        </article>
+//         </a>
+//         </article>
 
-        `
-    }).join("")
-
-
-    mainDom.insertAdjacentHTML("beforeend", pokemonsString);
-
-    let observedPokemon = document.querySelector("main article:nth-last-child(10)")
-    observedPokemon.classList.add("red")
-    observer.observe(observedPokemon)
-}
-
-function getIdFromPokemon(PokemonUrl) {
-    return PokemonUrl.slice(0, -1).split("/").pop()
+//         `
+//     }).join("")
 
 
-}
+//     mainDom.insertAdjacentHTML("beforeend", pokemonsString);
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry) => {
+//     let observedPokemon = document.querySelector("main article:nth-last-child(10)")
+//     observedPokemon.classList.add("red")
+//     observer.observe(observedPokemon)
+// }
 
-        if (entry.isIntersecting) {
-            currentOffset = currentOffset + 20
-            console.log(currentOffset);
-
-            if (currentOffset < 1330) {
-                observer.unobserve(entry.target)
-                fetchPokemon(currentOffset)
-
-            }
-            else {
-                console.log("End");
-            }
-        }
-    })
+// function getIdFromPokemon(PokemonUrl) {
+//     return PokemonUrl.slice(0, -1).split("/").pop()
 
 
-}, {
-    threshold: 1
-})
+// }
+
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach((entry) => {
+
+//         if (entry.isIntersecting) {
+//             currentOffset = currentOffset + 20
+//             console.log(currentOffset);
+
+//             if (currentOffset < 1330) {
+//                 observer.unobserve(entry.target)
+//                 fetchPokemon(currentOffset)
+
+//             }
+//             else {
+//                 console.log("End");
+//             }
+//         }
+//     })
+
+
+// }, {
+//     threshold: 1
+// })
 
 
 
 
-fetchPokemon(currentOffset)
+// fetchPokemon(currentOffset)
+
+
+// // search
+// const searchInput = document.querySelector(".search");
+// if (searchInput) {
+//     searchInput.addEventListener("input", handleSearch);
+// }
+
+// function handleSearch(e) {
+//     const filter = e.target.value.toLowerCase().trim();
+//     const articles = document.querySelectorAll("main article");
+//     articles.forEach(article => {
+//         const nameEl = article.querySelector("h2");
+//         if (!nameEl) return;
+//         const name = nameEl.textContent.toLowerCase();
+//         article.style.display = name.includes(filter) ? "" : "none";
+//     });
+// }
+
+
+
+

@@ -5,180 +5,124 @@
   margin: 0;
 }
 
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  /* max-width: 375px; */
+  /* margin: 0 auto; */
+  background-color: #DC0A2D;
+}
 
 main article.red {
-  background-color: red;
+  background-color: #DC0A2D;
 }
 
 main {
-  margin-inline: auto;
-  max-width: 900px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  padding: 2%;
 }
 
-article img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-h1 {
-  font-size: 54px;
-  text-align: center;
-  margin: 40px 0;
-  color: #8a6e13;
-}
-
-
-/* RØD BAGGRUND */
-body {
-  margin: 0;
-  background-color: #ff0000;
-  /* rød på siderne */
-  font-family: system-ui, sans-serif;
-}
-
-/* STOR FIRKANT RUNDT OM ALLE KORT */
-.big-wrapper {
-  max-width: 900px;
-  margin: 40px auto;
-  /* centrerer */
-  background: #efeded;
-  /* lys grå som på dit billede */
-  padding: 40px;
-  border-radius: 12px;
-}
-
-/* GRID */
-main {
+.pokemon-inner-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 1rem;
 }
 
-/* Reset/grund */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Titel (valgfri styling) */
-h1 {
-  margin: 0;
-  padding: 18px;
-  background: #e10f1b;
-  color: white;
-  font-size: 28px;
-  font-weight: 800;
-  border-radius: 0 0 18px 18px;
-}
-
-/* GRID layout til dine cards */
-main {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 18px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  /* luft mellem kort */
-}
-
-/* Selve “kortet” = article */
-main article {
+.pokemon {
   background: white;
   border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
-  overflow: hidden;
-  transition: transform .15s ease, box-shadow .15s ease;
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.445);
 }
 
-main article:hover {
-  transform: translateY(-2px);
+.pokemon:hover {
+  transform: translateY(-5px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
 }
 
+
 /* Link fylder hele kortet */
-main article a {
+.pokemon a {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: inherit;
-  padding: 12px;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background: linear-gradient(white 55%, rgb(184, 183, 183)) 45%;
 }
 
-/* ID-linje (din <p>) */
-main article p {
+.pokemon-number {
   width: 100%;
-  margin: 0;
   font-size: 12px;
   color: #8a8a8a;
   text-align: right;
 }
 
-/* Dit navn (<h2>) — flyt nederst */
-main article h2 {
+.pokemon figcaption span {
   order: 3;
-  /* gør at h2 kommer efter billedet */
-  margin: 8px 0 0 0;
   font-size: 14px;
-  font-weight: 700;
   text-transform: capitalize;
 }
 
-/* Billedet */
-main article img {
+.pokemon img {
   order: 2;
   width: 80px;
   height: 80px;
-  object-fit: contain;
-  display: block;
   margin-top: 6px;
 }
 
-/* Header */
+
 h1 {
-  margin: 0;
-  padding: 20px 20px 10px 20px;
-  background: #e10f1b;
+
   color: white;
   font-size: 28px;
   font-weight: 800;
-  border-radius: 0 0 0 0;
+
 }
 
-/* Search wrapper (rød baggrund fortsætter) */
 .search {
-  background: #e10f1b;
-  padding: 0 20px 20px 20px;
-  border-radius: 0 0 20px 20px;
-}
-
-/* Selve input feltet */
-.search {
-  width: 100%;
-  height: 42px;
+  width: 330px;
+  height: 30px;
   border: none;
   border-radius: 999px;
   padding: 0 18px;
   font-size: 14px;
-  outline: none;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+
+}
+
+.tekst-billed {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 10px;
+  padding: 2%;
+  margin-top: 20px;
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: left;
+
+
+}
+
+#search {
+  color: black;
+  position: absolute;
+  margin-left: 10px;
+  padding-top: 10px;
+  width: 300px;
+
+
+}
+
+#sort-button {
+  display: flex;
+  margin-left: 300px;
 }
 
 /* Mobil: 2 kolonner på små skærme */
 @media (max-width: 360px) {
-  main {
+  .pokemon-inner-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
